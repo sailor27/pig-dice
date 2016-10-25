@@ -25,9 +25,10 @@ $(document).ready(function(){
     console.log(player1.roll);
       if (player1.roll === 1){
         $(".p1roll").text("bust!");
+        $("dl#p1roll").hide();
         $("#p2roll").show();
       } else {
-        player1.score = (this.score + this.roll);
+        player1.score = (player1.score + player1.roll);
         $("#p1Score").text(player1.score);
         $(".p1roll").text(player1.roll);
         //second click
