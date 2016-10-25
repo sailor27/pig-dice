@@ -27,8 +27,9 @@ $(document).ready(function(){
         $(".p1roll").text("bust!");
         $("#p2roll").show();
       } else {
-        player1.score = (player1.score + this.roll);
+        player1.score = (this.score + this.roll);
         $("#p1Score").text(player1.score);
+        $(".p1roll").text(player1.roll);
         //second click
         $("dl#p1roll").click(function(event){
           event.preventDefault();
