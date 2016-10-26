@@ -20,6 +20,10 @@ dt:hover{
   display: none;
 }
 
+#p2winner {
+  display: none;
+}
+
 #p1hold {
   display:none;
 }
