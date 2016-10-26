@@ -3,15 +3,16 @@
 * Score at start of the game is 0 for both players.
   * Example Input: page loads
   * Example Output: Player 1 score = 0, Player 2 score = 0
+  /
 
 
 * First player rolls die; random value between 1 & 6 is returned
   * Example Input: Submit  
-  * Example Output: 4
+  * Example Output: 4 /
 
 * If random integer = 1, player 1 score = 0, & second player rolls die    
   * Example Input: 1
-  * Example Output: Score = score + 0; player 2's turn
+  * Example Output: Score = score + 0; player 2's turn /
 
 * Second player rolls die; random value between 1 & 6 is returned
   * Example Input: Submit

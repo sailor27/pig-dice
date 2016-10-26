@@ -1,11 +1,41 @@
 .dl-horizontal {
-  font-size: 2em;
+  font-size: 3em;
 }
+
 
 dt:hover{
   color:#EE7E8C;
   font-style: oblique;
 }
+
+.p1roll, .p2roll {
+  text-align: center;
+  font-size: 6em;
+  font-family: sans-serif;
+  font-weight: bold;
+
+}
+
+#p1winner {
+  display: none;
+}
+
+#p1hold {
+  display:none;
+}
+
+#p2hold {
+  display: none;
+}
+
+
+
+/*dl.play-area {
+  display: block;
+  margin-left: auto;
+  margin-right: 30px;
+
+}*/
 
 #p2roll {
   display:none;
