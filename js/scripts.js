@@ -36,9 +36,6 @@ $(document).ready(function(){
         $("dl#p1roll").hide();
         $("#p2roll").show();
         $("dl#p1hold").hide();
-        //} else if (player1.score >= 100){
-        //  $("#p1winner").show();
-
       } else {
         player1.score = (player1.score + player1.roll);
         $("#p1Score").text(player1.score);
@@ -51,34 +48,31 @@ $(document).ready(function(){
             $("#p2roll").show();
           });
       }
-///////////////////////////////////////////////////////////////////
-    $("dl#p2roll").click(function(event){
-      event.preventDefault();
-      player2.rollDie();
-      console.log(player2.roll);
-
-        if (player2.roll === 1){
-          $(".p2roll").text("bust!");
-          $("dl#p2roll").hide();
-          $("#p1roll").show();
-          $("dl#p2hold").hide();
-
-      //  } else if (player2.score >= 100){
-      //    $("#p2winner").show();
-        } else {
-          player2.score = (player2.score + player2.roll);
-          $("#p2Score").text(player2.score);
-          $(".p2roll").text(player2.roll);
-          $("dl#p2hold").show();
-
-            $("dl#p2hold").click(function(event){
-              event.preventDefault();
-              $("dl#p2roll").hide();
-              $("#p1roll").show();
-            });
-        }
-
     });
+///////////////////////////////////////////////////////////////////
+   $("dl#p2roll").click(function(event){
+    event.preventDefault();
+    $(".p2roll").text("");
+    player2.rollDie();
+    console.log(player2.roll);
+
+      if (player2.roll === 1){
+        $(".p2roll").text("bust!");
+        $("dl#p2roll").hide();
+        $("#p1roll").show();
+        $("dl#p2hold").hide();
+      } else {
+        player2.score = (player2.score + player2.roll);
+        $("#p2Score").text(player2.score);
+        $(".p2roll").text(player2.roll);
+        $("dl#p2hold").show();
+
+          $("dl#p2hold").click(function(event){
+            event.preventDefault();
+            $("dl#p2roll").hide();
+            $("#p1roll").show();
+          });
+      }
   });
 
 });
